@@ -16,11 +16,19 @@ app.use(express.static(path.join(__dirname, "public")));
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/saree_inventory";
 
-mongoose
-  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connect error:", err));
+// mongoose
+//   .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.error("MongoDB connect error:", err));
 
+async function connect() {
+  try{
+    await mongoose.connect(MONGODB_URI);
+    console.log("connect success")
+  }catch(err){
+    console.log(err)
+  }
+}
 // API routes
 app.post("/api/sarees", async (req, res) => {
   try {
