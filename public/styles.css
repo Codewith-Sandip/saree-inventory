@@ -1,0 +1,15 @@
+:root{--bg:#f5f7fb;--card:#fff;--accent:#6b5b95}
+body{font-family:Inter,Segoe UI,Arial;background:var(--bg);margin:0;padding:20px;color:#222}
+.container{max-width:980px;margin:0 auto}
+h1{text-align:center;margin-bottom:18px;color:var(--accent)}
+.card{background:var(--card);padding:16px;border-radius:10px;margin-bottom:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+label{display:flex;flex-direction:column;flex:1;min-width:140px;font-size:13px}
+input[type=text],input[type=number],input{padding:8px;border-radius:6px;border:1px solid #ddd}
+button{background:var(--accent);color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer}
+#list{margin-top:12px}
+.item{padding:10px;border:1px solid #eee;border-radius:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.item small{display:block;color:#666}
+.computed{margin-top:8px;color:#333}
+.actions button{margin-left:6px;background:#333}
+@media(min-width:900px){ .row label{min-width:200px} }
